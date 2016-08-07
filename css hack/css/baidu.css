@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 12px 'Microsoft YaHei', arial;
+    height: 100%;
+    behavior:url(css/csshover.htc);
+}
+
+input{
+    outline: none;
+}
+.wrapper{
+    position: relative;
+    min-width: 810px;
+    min-height: 600px;
+    height: auto !important;
+    height: 600px;
+}
+/*导航栏*/
+
+.header {
+    overflow: hidden;
+}
+
+.header .nav {
+    float: right;
+    margin:19px 0 5px 0;
+    padding: 0 142px 0 0;
+}
+
+.header .nav a {
+    margin-left: 20px;
+    color: #333;
+    float: left;
+    font-weight: bold;
+    line-height: 24px;
+    font-size: 13px;
+}
+
+.header a:hover {
+    color: #00c;
+}
+/*设置下拉菜单*/
+.setting-menu{
+    position: absolute;
+    width: 46px;
+    height: 24px;
+    right: 93px;
+    font-size: 13px;
+    text-align: center;
+}
+.setting-menu a{
+    margin:0;
+    text-decoration: none;
+}
+.setting-menu:hover .baidu-setting{
+    display: block;
+}
+
+/*更多产品*/
+
+.header a.more {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    width: 60px;
+    height: 23px;
+    float: left;
+    color: white;
+    background: #38f;
+    line-height: 24px;
+    font-size: 13px;
+    text-align: center;
+    overflow: hidden;
+    border-bottom: 1px solid #38f;
+    margin: 0 2px 0 19px;
+    text-decoration: none;
+    text-decoration: none;
+}
+.header a.more:hover{
+    color: #fff;
+}
+
+/*主体部分*/
+
+.content {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: 240px;
+    display: block;
+}
+.content .search-form{
+    height: 191px;
+    position: relative;
+    top: -191px;;
+}
+
+/*百度logo*/
+
+.content img {
+    width: 270px;
+    height: 129px;
+}
+
+
+/*输入框*/
+
+.content .search-input {
+    width: 539px;
+    height: 28px;
+    border: 1px solid #ddd;
+    padding: 3px 0 3px 7px;
+    border-right-width: 0;
+    vertical-align: middle;
+    line-height: 28px;
+}
+
+.content .search-input:hover {
+    border-color: #999 transparent #b3b3b3 #999;
+}
+
+.content .search-input:focus{
+    border-color: #4791ff transparent #4791ff #4791ff;
+}
+
+
+/*按钮*/
+
+.content .search-btn {
+    width: 100px;
+    height: 36px;
+    margin: -5px;
+    border: 0;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: #3385ff;
+    vertical-align: middle;
+    cursor:pointer;
+}
+
+.content .search-btn:hover {
+    background-color: #317ef3;
+}
+.content form{
+    position: relative;
+}
+
+/*底部信息*/
+
+.footer {
+    width: 100%;
+    position: absolute;
+    bottom: 44px;
+    padding-top: 50px;
+    text-align: center;
+}
+.footer p{
+    text-align: center;
+}
+.footer p a{
+    color: #00c;
+}
+.footer p a:hover{
+    color: #00c;
+}
+
+.footer .copy-right a{
+    color: #666;
+}
+.footer .copy-right a:hover{
+    color: #666;
+}
+.footer .icon-copyright{
+    position: relative;
+    top: 2px;;
+    display: inline-block;
+    width: 14px;
+    height: 17px;
+    background: url("../images/footer_05.jpg") no-repeat;
+}
