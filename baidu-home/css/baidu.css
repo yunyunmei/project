@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 13px/24px 'Microsoft YaHei', arial;
+}
+
+
+/*导航栏*/
+
+header {
+    overflow: hidden;
+    margin: 19px 0 5px 0;
+    position: absolute;
+    right: 0;
+}
+
+header nav {
+    width: 500px;
+    float: right;
+}
+
+header nav a {
+    margin-left: 20px;
+    font-weight: bold;
+    line-height: 24px;
+}
+
+header a:link,
+header a:visited {
+    color: #333;
+}
+
+header a:hover {
+    color: #38f;
+}
+
+
+/*更多产品*/
+
+header a.more {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    width: 60px;
+    height: 23px;
+    float: left;
+    color: white;
+    background: #38f;
+    line-height: 24px;
+    font-size: 13px;
+    text-align: center;
+    overflow: hidden;
+    border-bottom: 1px solid #38f;
+    margin: 0 2px 0 20px;
+    text-decoration: none;
+}
+
+
+/*主体部分*/
+
+.content {
+    width: 635px;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 80px auto;
+}
+
+
+/*百度logo*/
+
+.content img {
+    width: 270px;
+    height: 129px;
+}
+
+form {
+    margin: 22px auto 0;
+    font-size: 0;
+}
+
+
+/*输入框*/
+
+.content input {
+    height: 34px;
+    width: 534px;
+    border: 1px solid #b6b6b6;
+    margin-right: 0;
+    border-right-width: 0;
+    overflow: hidden;
+    padding-right: 0;
+    vertical-align: middle;
+    outline: none;
+    text-indent: 10px;
+}
+
+.content input:hover {
+    border-color: #999;
+}
+
+.content input:focus {
+    border-color: #3385ff;
+}
+
+
+/*按钮*/
+
+.content button {
+    width: 100px;
+    height: 36px;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: #3385ff;
+    border-width: 0;
+    margin-left: 0;
+    vertical-align: middle;
+    border-bottom: 1px solid #2d78f4;
+    outline: medium;
+    cursor: pointer;
+}
+
+.content button:hover {
+    background: #317ef3;
+    border-bottom: 1px solid #2868c8;
+    box-shadow: 1px 1px 1px #ccc;
+}
+
+
+/*底部信息*/
+
+footer {
+    width: 655px;
+    height: 70px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 43px;
+}
+
+
+/*底部二维码*/
+
+.z_img,
+.y_img {
+    float: left;
+    height: 60px;
+    width: 60px;
+    margin-top: 5px;
+}
+
+.z_code,
+.y_code {
+    height: 60px;
+    width: 122px;
+    float: left;
+    margin: 0 15px;
+}
+
+.z_txt,
+.y_txt {
+    line-height: 23px;
+    text-align: center;
+    font-size: 12px;
+    margin: 13px 0 0 15px;
+    color: #999;
+}
+
+.code b {
+    color: #666;
+}
+
+
+/*底部左边的备注*/
+
+.beizhu {
+    width: 345px;
+    float: left;
+    margin-left: 5px;
+    font-size: 12px;
+    color: #999;
+}
+
+.d1 a {
+    color: #999;
+    margin-left: 55px;
+}
+
+.d2 a {
+    color: #999;
+}
+
+.d2 img,
+.d3 img {
+    width: 14px;
+    height: 17px;
+}
