@@ -1,0 +1,82 @@
+.container {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+body{
+    background: ghostwhite;
+}
+/*头部*/
+
+#navbar a {
+    margin: 5px;
+    color: #ffffff;
+    padding: 8px 16px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+}
+
+#navbar a:hover {
+    background-color: #6699FF;
+}
+
+/*右侧主体内容*/
+.main {
+    background: ghostwhite;
+    overflow: hidden;
+    display: block;
+}
+
+.main i {
+    border: 1px solid blue;
+    float: left;
+    height: 34px;
+    margin-right: 5px;
+
+}
+
+/*信息*/
+.infor {
+    margin: 20px;
+}
+.infor a{
+    border:1px solid gray;
+    padding: 5px;
+    border-radius: 5px;
+}
+a :hover{
+    text-decoration: initial!important;
+}
+.txt {
+    margin: 10px;
+}
+
+/*搜索*/
+.search {
+    width: 290px;
+    height: 40px;
+    margin: 50px auto 20px auto;
+    text-align: center;
+}
+
+.search h5 {
+    float: left;
+    display: block;
+    padding-right: 20px;
+}
+
+.search .form-search {
+    padding-top: 5px;
+}
+
+/*底部*/
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer span {
+    line-height: 40px;
+
+}
