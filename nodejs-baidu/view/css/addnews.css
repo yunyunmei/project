@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/*form{*/
+    /*margin: 20px;*/
+/*}*/
+/*div{*/
+
+/*}*/
+.textc{
+    text-align: center;
+}
+.input{
+    width: 500px;
+    height: 30px;
+    margin-bottom: 5px;
+}
+.mar-10{
+    margin: 20px 0;
+}
+
+.tex ,textarea{
+    width: 80%;
+    height: 200px;
+    text-align:justify;
+    text-indent: 1cm;
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/home-style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+<!--头部-->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">后台管理系统</a>
+        </div>
+        <!--连接-->
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <a href="http://127.0.0.1:3000/index.html" class="active">注销</a>
+                <a href="admin.html" class="active">帮助</a>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+<!--左侧导航-->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar nav">
+            <div class="nav-title">    导航栏    </div>
+            <div class="nav-info">
+                <a href="./admin.html">
+                    <div class="info-title">全部</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--右侧主体内容-->
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <div class="add-news">添加新闻</div>
+    <div class="del-news">删除新闻</div>
+    <div class="txt">
+        <table class="table table-striped">
+            <tr>
+                <th class="col-md-1">
+                    <input type="checkbox" id="all-num">
+                </th>
+                <th class="col-md-1">id</th>
+                <th class="col-md-3">新闻标题</th>
+                <th class="col-md-4">类别</th>
+                <th class="col-md-1">时间</th>
+                <th class="col-md-2">修改</th>
+            </tr>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="mask"></div>
+<div class="addnews-box">
+    <div class="close">关闭</div>
+    <div class="wrap">
+        <form>
+            <p>
+                <label for="addtitle">新闻标题</label>
+                <input type="text" id="addtitle" class="title" name="title">
+            </p>
+            <p>
+                <label for="addnecategory">新闻类别 </label>
+                <select id="addnecategory" class="addnecategory" name="addnecategory">
+                    <option value="推荐">推荐</option>
+                    <option value="百家">百家</option>
+                    <option value="本地">本地</option>
+                    <option value="娱乐">娱乐</option>
+                    <option value="社会">社会</option>
+                </select>
+            </p>
+            <p>
+                <label for="addimg">图片地址</label>
+                <input type="text" id="addimg" class="img" name="img">
+            </p>
+            <p>
+                <label for="addcontent">新闻内容</label>
+                <textarea name="content" id="addcontent" class="content"></textarea>
+            </p>
+            <p>
+                <label for="addtime">时间</label>
+                <input type="text" id="addtime" class="addtime" name="time" >
+            </p>
+            <p class="center">
+                <input type="submit" id="add-btn" class="box-btn" value="提交">
+                <input type="reset" class="box-btn" value="重置">
+            </p>
+        </form>
+    </div>
+</div>
+<div class="updatenews-box">
+    <div class="close">关闭</div>
+    <div class="wrap">
+        <form>
+            <p>
+                <label for="updatetitle">新闻标题</label>
+                <input type="text" class="title" id="updatetitle" name="title">
+            </p>
+            <p>
+                <label for="updatecategory">新闻类别</label>
+                <select name="updatecategory" id="updatecategory">
+                    <option value="推荐">推荐</option>
+                    <option value="百家">百家</option>
+                    <option value="本地">本地</option>
+                    <option value="娱乐">娱乐</option>
+                    <option value="社会">社会</option>
+                </select>
+            </p>
+            <p>
+                <label for="updateimg">图片地址</label>
+                <input type="text" class="img" id="updateimg" name="img">
+            </p>
+            <p>
+                <label for="updatecontent">新闻内容</label>
+                <textarea name="content" id="updatecontent" class="content"></textarea>
+            </p>
+            <p>
+                <label for="updatetime">时间</label>
+                <input type="text" class="time" id="updatetime" name="time" onfocus="this.blur();">
+            </p>
+            <p class="center">
+                <input type="submit" id="update-btn" class="box-btn" value="提交">
+                <input type="reset" value="重置" class="box-btn">
+            </p>
+        </form>
+    </div>
+</div>
+<div class="previewnews-box">
+    <div class="close">关闭</div>
+    <div class="wrap">
+        <form>
+            <p>
+                <label for="previewtitle">新闻标题</label>
+                <input type="text" class="title" id="previewtitle" name="title">
+            </p>
+            <p>
+                <label for="previewcategory">新闻类别</label>
+                <input type="text" class="desc" id="previewcategory" name="updatecategory">
+            </p>
+            <p>
+                <label for="previewimg">图片地址</label>
+                <input type="text" class="img" id="previewimg" name="img">
+            </p>
+            <p>
+                <label for="previewcontent">新闻内容</label>
+                <textarea name="content" id="previewcontent" class="content"></textarea>
+            </p>
+            <p>
+                <label for="previewtime">时间</label>
+                <input type="text" class="time" id="previewtime" name="time" onfocus="this.blur();">
+            </p>
+        </form>
+    </div>
+</div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script type="text/javascript" src="./js/moment.min.js"></script>
+<script type="text/javascript" src="./js/admin.js"></script>
+
+</body>
+</html>
