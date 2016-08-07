@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>计算器</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+<div id="calculator">
+    <form name="calculator" action="" method="get">
+        <div id="calcul-screen">
+            <!--结果显示窗口-->
+            <input type="text" name="text" id="text" class="screen" value="0" onfocus="this.blur();"/>
+        </div>
+        <div id="calcul-btn">
+            <ul> <!--配置按钮-->
+                <li class="symbol" onclick="clearscreen()">C</li>
+                <li class="symbol" onclick="del()">←</li>
+                <li class="symbol" onclick="sin()">sin</li>
+                <li class="symbol" onclick="cos()">cos</li>
+                <li onclick="command(7)">7</li>
+                <li onclick="command(8)">8</li>
+                <li onclick="command(9)">9</li>
+                <li class="symbol" onclick="divide()">÷</li>
+                <li onclick="command(4)">4</li>
+                <li onclick="command(5)">5</li>
+                <li onclick="command(6)">6</li>
+                <li class="symbol" onclick="ride()">×</li>
+                <li onclick="command(1)">1</li>
+                <li onclick="command(2)">2</li>
+                <li onclick="command(3)">3</li>
+                <li class="symbol" onclick="minus()">-</li>
+                <li onclick="command(0)">0</li>
+                <li onclick="point()">.</li>
+                <li class="symbol" onclick="plus()">+</li>
+                <li class="symbol" onclick="equal()">=</li>
+            </ul>
+        </div>
+    </form>
+    <span id="warn"></span>
+</div>
+<script src="js.js"></script>
+</body>
+</html>
