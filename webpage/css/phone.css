@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 8px 'Microsoft YaHei', arial;
+}
+
+/*头部*/
+header {
+    width: 100%;
+    background: #84c225;
+}
+
+/*头部的logo*/
+header .logo {
+    background: url("../img/phone.png") no-repeat -10px -10px;
+    width: 120px;
+    height: 103px;
+    margin: 0 auto;
+}
+
+/*主体内容*/
+.content {
+    height: 460px;
+    width: 270px;
+    display: block;
+    text-align: center;
+    margin: 5px auto;
+    list-style: none;
+    overflow: hidden;
+}
+
+.content li a {
+    text-decoration: none;
+    float: left;
+    margin: 5px 11px;
+}
+
+.content li {
+    height: 103px;
+    width: 260px;
+    list-style: none;
+    margin: 0 5px;
+    float: left;
+}
+
+.content a h1 {
+    line-height: 25px;
+    text-align: center;
+}
+
+.content li a span {
+    padding: 15px 0;
+    display: block;
+}
+
+.content li a span i {
+    display: block;
+    background: url("../img/phone.png") no-repeat 0 0;
+    width: 48px;
+    height: 48px;
+    margin: 0 auto;
+}
+
+/*主体内容的图片*/
+.content .s1 i {
+    background-position: -68px -410px;
+}
+
+.content .s2 i {
+    background-position: -10px -410px;
+}
+
+.content .s3 i {
+    background-position: -67px -353px;
+}
+
+.content .s4 i {
+    background-position: -10px -296px;
+}
+
+.content .s5 i {
+    background-position: -67px -296px;
+}
+
+.content .s6 i {
+    background-position: -10px -353px;
+}
+
+.content .s7 i {
+    background-position: -67px -239px;
+}
+
+.content .s8 i {
+    background-position: -10px -181px;
+}
+
+.content .s9 i {
+    background-position: -67px -181px;
+}
+
+.content .s10 i {
+    background-position: -10px -239px;
+}
+
+.content .s11 i {
+    background-position: -10px -123px;
+}
+
+.content .s12 i {
+    background-position: -67px -123px;
+}
+
+/*底部*/
+footer {
+    width: 100%;
+    height: 34px;
+    background: url("../img/footer.jpg");
+}
