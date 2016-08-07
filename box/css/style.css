@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.xiehe {
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: mistyrose;
+    border: 5px solid lightpink;
+    margin: 100px auto;
+}
+
+.xiezi {
+    width: 100px;
+    height: 100px;
+    background-color: lavenderblush;
+}
+.xiehe1 {
+    padding: 10px;
+    width: 130px;
+    height: 130px;
+    background-color: mistyrose;
+    border: 5px solid lightpink;
+    margin: 50px auto;
+    box-sizing: border-box;
+}
+
+.xiezi1 {
+    width: 100px;
+    height: 100px;
+    background-color: lavenderblush;
+    margin: auto;
+}

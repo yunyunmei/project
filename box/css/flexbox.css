@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    margin: 10px;
+}
+
+/*旧版弹性盒子*/
+.con1 {
+    display: -webkit-box;
+    width: 400px;
+    height: 200px;
+}
+
+.first1 {
+    height: 100px;
+    background-color: mistyrose;
+    -webkit-box-flex: 1;
+}
+
+.second1 {
+    height: 100px;
+    background-color: lightpink;
+    -webkit-box-flex: 1;
+}
+
+.three1 {
+    height: 100px;
+    background-color: lavenderblush;
+    -webkit-box-flex: 3;
+}
+
+/*新版弹性盒子*/
+.con2 {
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    width: 600px;
+    height: 300px;
+}
+
+.first2 {
+    height: 100px;
+    background-color: mistyrose;
+    -webkit-flex: 1;
+    order: 3;
+}
+
+.second2 {
+    height: 100px;
+    background-color: lightpink;
+    -webkit-flex: 2;
+    order: 1;
+}
+
+.three2 {
+    height: 100px;
+    background-color: lavenderblush;
+    -webkit-flex: 1;
+    order: 2;
+}

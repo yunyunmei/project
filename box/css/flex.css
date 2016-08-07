@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+img{
+    width: 150px;
+}
+.col{
+    -webkit-column-count: 3;
+    -webkit-column-width:300px;
+    margin:20px 5px;
+    -webkit-column-gap: 40px;
+}
+.center{
+    height: 300px;
+    width: 300px;
+    background-color: antiquewhite;
+    display:-webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    margin: 10px auto;
+}
