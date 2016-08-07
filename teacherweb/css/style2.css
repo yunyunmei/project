@@ -1,0 +1,134 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #177791;
+    font: 12px/150% 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+}
+
+
+/*设置整体的样式*/
+
+.wrapper {
+    margin: 10px auto 20px;
+    text-align: -webkit-center;
+    background-color: #ffffff;
+    width: 710px;
+    border-radius: 25px;
+}
+
+.jiao-r,
+.jiao-l {
+    height: 28px;
+    width: 29px;
+}
+
+
+/*logo的样式设置*/
+
+.logo img {
+    width: 180px;
+    margin: 5px 0 3px 5px;
+}
+
+
+/*导航栏设置*/
+
+.nav {
+    width: 472px;
+}
+
+.nav a {
+    color: #f09;
+    margin-left: 5px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    text-decoration: none;
+}
+
+.center table {
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+
+/*标题的设置*/
+
+caption {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px auto 30px;
+}
+
+
+/*内容的单元格设置*/
+
+.center td {
+    padding: 2px;
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+
+/*设置需要标红字体的颜色*/
+
+.red {
+    color: #f00;
+}
+
+
+/*设置标题字的样式*/
+
+.tittle {
+    font-size: 13px;
+    line-height: 150%;
+    color: rgb(0, 51, 153);
+    font-weight: bold;
+    background-color: #eee;
+}
+
+.blue {
+    color: #00f;
+    width: 496px;
+}
+
+
+/*设置输入框的长度*/
+
+input {
+    width: 243px;
+}
+
+.input input {
+    width: 13px;
+    height: 13px;
+    margin: 3px 3px 3px 4px;
+}
+
+.button input {
+    width: 70px;
+}
+
+
+/*设置文本框的大小*/
+
+.textarea {
+    width: 441px;
+    height: 94px;
+}
+
+
+/*底部样式的设计*/
+
+.footer span {
+    color: #666;
+}
+
+.footer {
+    padding-bottom: 30px;
+}
