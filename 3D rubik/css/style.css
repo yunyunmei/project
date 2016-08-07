@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    height: 0;
+}
+
+div {
+    display: block;
+}
+
+/*魔方的整体样式*/
+#box {
+    animation:animation 9s linear infinite;
+
+    -moz-animation: animation 9s linear infinite;
+    -webkit-animation:animation 9s linear infinite;
+    -o-animation:animation 9s linear infinite;
+    margin: 150px;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    /*指定当前旋转的位置*/
+    transform-origin:150px 150px 0 ;
+    -webkit-transform-origin: 150px 150px 0;
+}
+
+#box div {
+    position: absolute;
+    opacity: .9;
+}
+#box .one, .two, .three, .four, .five, .six{
+    width: 300px;
+    height: 300px;
+}
+/*使魔方变得立体的样式设置*/
+#box .one {
+    transform: translateZ(150px);
+    -webkit-transform: translateZ(150px);
+}
+
+#box .two {
+    transform: rotatex(-90deg) translateZ(150px);
+    -webkit-transform: rotatex(-90deg) translateZ(150px);
+}
+
+#box .three {
+    transform: rotatex(90deg) translateZ(150px);
+    -webkit-transform: rotatex(90deg) translateZ(150px);
+}
+
+#box .four {
+    transform: rotatey(-90deg) translateZ(150px);
+    -webkit-transform: rotatey(-90deg) translateZ(150px);
+}
+
+#box .five {
+    transform: translateZ(-150px);
+    -webkit-transform: translateZ(-150px);
+}
+
+#box .six {
+    transform: rotatey(90deg) translateZ(150px);
+    -webkit-transform: rotatey(90deg) translateZ(150px);
+}
+
+/* end  使魔方变得立体的样式设置*/
+
+/*魔方每个面的颜色设置*/
+#box .one div{
+    background-color: pink;
+}
+#box .two div{
+    background-color: white;
+}
+
+#box .three div{
+    background-color: yellow;
+}
+
+#box .four div{
+    background: deepskyblue;
+}
+
+#box .five div{
+    background: greenyellow;
+}
+
+#box .six div{
+    background: red;
+}
+
+/* end  魔方每个面的颜色设置*/
+/*每个小方格的样式设置*/
+#box .one1, .two1, .three1, .four1, .five1, .six1 {
+    position: absolute;
+    width: 94px;
+    height: 94px;
+    border: 3px solid black;
+    border-radius: 15px;
+}
+
+#box .one2, .two2, .three2, .four2, .five2, .six2 {
+    position: absolute;
+    width: 94px;
+    height: 94px;
+    border: 3px solid black;
+    border-radius: 15px;
+    transform: translate(100px, 0);
+    -webkit-transform: translate(100px, 0);
+}
+
+#box .one3, .two3, .three3, .four3, .five3, .six3 {
+    position: absolute;
+    width: 94px;
+    height: 94px;
+    border: 3px solid black;
+    border-radius: 15px;
+    transform: translate(200px, 0);
+    -webkit-transform: translate(200px, 0);
+}
+
+#box .one4, .two4, .three4, .four4, .five4, .six4 {
+    position: absolute;
+    width: 94px;
+    height: 94px;
+    border: 3px solid black;
+    border-radius: 15px;
+    transform: translate(0, 100px);
+    -webkit-transform: translate(0, 100px);
+}
+
+#box .one5, .two5, .three5, .four5, .five5, .six5 {
+    position: absolute;
+    width: 94px;
+    height: 94px;
+    border: 3px solid black;
+    border-radius: 15px;
+    transform: translate(100px, 100px);
+    -webkit-transform: translate(100px, 100px);
+}
+
+#box .one6, .two6, .three6, .four6, .five6, .six6 {
+    position: absolute;
+    width: 94px;
+    height: 94px;
+    border: 3px solid black;
+    border-radius: 15px;
+    transform: translate(200px, 100px);
+    -webkit-transform: translate(200px, 100px);
+}
+
+#box .one7, .two7, .three7, .four7, .five7, .six7 {
+    position: absolute;
+    width: 94px;
+    height: 94px;
+    border: 3px solid black;
+    border-radius: 15px;
+    transform: translate(0, 200px);
+    -webkit-transform: translate(0, 200px);
+}
+
+#box .one8, .two8, .three8, .four8, .five8, .six8 {
+    position: absolute;
+    width: 94px;
+    height: 94px;
+    border: 3px solid black;
+    border-radius: 15px;
+    transform: translate(100px, 200px);
+    -webkit-transform: translate(100px, 200px);
+}
+
+#box .one9, .two9, .three9, .four9, .five9, .six9 {
+    position: absolute;
+    width: 94px;
+    height: 94px;
+    border: 3px solid black;
+    border-radius: 15px;
+    transform: translate(200px, 200px);
+    -webkit-transform: translate(200px, 200px);
+}
+
+/* end 每个小方格的样式设置*/
+/*动画效果设置*/
+
+@keyframes animation{
+    20% {
+        -webkit-transform: rotateZ(90deg) rotateY(135deg);
+        transform: rotateZ(90deg) rotateY(135deg);
+    }
+    40% {
+        -webkit-transform: rotateY(-90deg) rotateZ(135deg);
+        transform: rotateY(-90deg) rotateZ(135deg);
+    }
+    60% {
+        transform: rotateY(125deg) rotateZ(135deg);
+        -webkit-transform: rotateY(125deg) rotateZ(135deg);
+    }
+    80% {
+        transform: rotateY(135deg) rotateX(135deg);
+        -webkit-transform: rotateY(135deg) rotateX(135deg);
+    }
+}
+
+/*end 动画效果设置*/
