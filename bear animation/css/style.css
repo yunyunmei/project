@@ -1,0 +1,663 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    width: 300px;
+    margin: 100px auto;
+    position: relative;
+
+}
+
+.head {
+    position: absolute;
+    width: 290px;
+    height: 240px;
+    background: #fbb073;
+    border: 4px solid #8c371f;
+    overflow: hidden;
+    z-index: 2;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 115px;
+    border-bottom-left-radius: 115px;
+}
+
+/*身体*/
+.content {
+    position: absolute;
+    background: #fbb073;
+    width: 150px;
+    height: 180px;
+    border: 4px solid #8c371f;
+    top: 210px;
+    left: 69px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/*领带*/
+.content .lefttie, .content .righttie {
+    position: absolute;
+    width: 34px;
+    height: 65px;
+    background: #feb4b5;
+    left: 36px;
+    -webkit-transform: rotate(29deg);
+    -moz-transform: rotate(29deg);
+    -ms-transform: rotate(29deg);
+    -o-transform: rotate(29deg);
+    transform: rotate(29deg);
+    border-bottom-right-radius: 115px;
+    border-bottom-left-radius: 203px;
+}
+
+.content .righttie {
+    left: 77px;
+    -webkit-transform: rotate(-29deg);
+    -moz-transform: rotate(-29deg);
+    -ms-transform: rotate(-29deg);
+    -o-transform: rotate(-29deg);
+    transform: rotate(-29deg);
+    border-bottom-right-radius: 95px;
+    border-bottom-left-radius: 54px;
+}
+
+/*脚*/
+.foot .leftfoot, .foot .ringhtfoot {
+    position: absolute;
+    background: #fbb073;
+    width: 65px;
+    height: 80px;
+    border: 4px solid #8c371f;
+    z-index: 2;
+    border-top-right-radius: 191px;
+    border-top-left-radius: 184px;
+    border-bottom-right-radius: 181px;
+    border-bottom-left-radius: 147px;
+    top: 310px;
+    left: 50px;
+    -webkit-transform: rotate(-17deg);
+    -moz-transform: rotate(-17deg);
+    -ms-transform: rotate(-17deg);
+    -o-transform: rotate(-17deg);
+    transform: rotate(-17deg);
+    -webkit-animation: foot 3s linear infinite;
+    -o-animation: head 3s linear infinite;
+    animation: head 3s linear infinite;
+}
+
+.foot .ringhtfoot {
+    left: 180px;
+    -webkit-transform: rotate(17deg);
+    -moz-transform: rotate(17deg);
+    -ms-transform: rotate(17deg);
+    -o-transform: rotate(17deg);
+    transform: rotate(17deg);
+}
+
+/*手*/
+.hand .lefthand, .hand .righthand {
+    background: #fbb073;
+    width: 50px;
+    height: 120px;
+    border: 4px solid #8c371f;
+    position: absolute;
+    top: 186px;
+    left: 23px;
+    border-top-right-radius: 191px;
+    border-top-left-radius: 184px;
+    border-bottom-left-radius: 435px;
+    -webkit-transform: rotate(-61deg);
+    -moz-transform: rotate(-61deg);
+    -ms-transform: rotate(-61deg);
+    -o-transform: rotate(-61deg);
+    transform: rotate(-61deg);
+}
+
+.hand .righthand {
+    top: 225px;
+    left: 204px;
+    border-top-right-radius: 253px;
+    border-top-left-radius: 210px;
+    border-bottom-right-radius: 86px;
+    border-bottom-left-radius: 435px;
+    -webkit-transform: rotate(-48deg);
+    -moz-transform: rotate(-48deg);
+    -ms-transform: rotate(-48deg);
+    -o-transform: rotate(-48deg);
+    transform: rotate(-48deg);
+}
+
+/*耳朵的设置*/
+.ear .leftear, .ear .rightear {
+    position: absolute;
+    background: #fbb073;
+    width: 100px;
+    height: 126px;
+    border: 4px solid #8c371f;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-top-right-radius: 167px;
+    border-top-left-radius: 210px;
+    border-bottom-right-radius: 144px;
+    border-bottom-left-radius: 247px;
+    top: -20px;
+    left: -40px;
+}
+
+.ear .rightear {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    border-top-right-radius: 210px;
+    border-top-left-radius: 167px;
+    border-bottom-right-radius: 247px;
+    border-bottom-left-radius: 144px;
+    left: 221px;
+}
+
+/*内耳的设置*/
+.ear .leftear .lear, .ear .rightear .rear {
+    position: absolute;
+    background: #fff597;
+    width: 35px;
+    height: 48px;
+    -webkit-transform: rotate(-7deg);
+    -moz-transform: rotate(-7deg);
+    -ms-transform: rotate(-7deg);
+    -o-transform: rotate(-7deg);
+    transform: rotate(-7deg);
+    border-top-right-radius: 154px;
+    border-top-left-radius: 233px;
+    border-bottom-right-radius: 185px;
+    border-bottom-left-radius: 280px;
+    top: 38px;
+    left: 31px;
+    z-index: 2;
+}
+
+.ear .rightear .rear {
+    -webkit-transform: rotate(-11deg);
+    -moz-transform: rotate(-11deg);
+    -ms-transform: rotate(-11deg);
+    -o-transform: rotate(-11deg);
+    transform: rotate(-11deg);
+    border-top-right-radius: 210px;
+    border-top-left-radius: 167px;
+    border-bottom-right-radius: 247px;
+    border-bottom-left-radius: 144px;
+    top: 37px;
+    left: 39px;
+}
+
+/*眼睛设置*/
+.eye .lefteye, .eye .righteye {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #a34729;
+    border: 4px solid #8c371f;
+    border-radius: 50%;
+    top: 118px;
+    left: 50px;
+    z-index: 3;
+}
+
+.eye .righteye {
+    left: 196px;
+}
+
+/*眼睛内部白点设置*/
+.eye .lefteye .leye, .eye .righteye .reye {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border-radius: 50%;
+    top: 8px;
+    left: 6px;
+    z-index: 3;
+}
+
+/*鼻子外轮廓*/
+.nose {
+    position: absolute;
+    width: 92px;
+    height: 80px;
+    z-index: 3;
+    border-radius: 50%;
+    background: #feca98;
+    top: 149px;
+    left: 101px;
+}
+
+/*鼻子*/
+.nose .no {
+    position: absolute;
+    width: 40px;
+    height: 35px;
+    border-radius: 50%;
+    background: #670100;
+    left: 25px;
+    top: -1px;
+}
+
+/*嘴巴*/
+.nose .mouse .one {
+    height: 14px;
+    border: 2px solid #cc6700;
+    border-radius: 3px;
+    position: absolute;
+    left: 43px;
+    top: 33px;
+}
+
+.nose .mouse .two {
+    width: 30px;
+    height: 30px;
+    border-bottom-left-radius: 100px;
+    border-bottom: 3px solid #cc6700;
+    border-left: 3px solid #cc6700;
+    position: absolute;
+    left: 30px;
+    top: 26px;
+    -webkit-transform: rotate(-47deg);
+    -moz-transform: rotate(-47deg);
+    -ms-transform: rotate(-47deg);
+    -o-transform: rotate(-47deg);
+    transform: rotate(-47deg);
+}
+
+/*腮红*/
+.red .lred, .red .rred {
+    position: absolute;
+    /*background: #feb4b5;*/
+    width: 45px;
+    height: 30px;
+    border-radius: 50%;
+    top: 177px;
+    left: 43px;
+    z-index: 2;
+}
+
+.red .rred {
+    left: 205px;
+}
+
+/*动画*/
+/*左脚*/
+.foot .leftfoot {
+    -webkit-animation: foot1 2s linear infinite;
+    -moz-animation: foot1 2s linear infinite;
+    -o-animation: foot1 2s linear infinite;
+    animation: foot1 2s linear infinite;
+}
+
+@keyframes foot1 {
+    25% {
+        transform: rotate(-20deg);
+    }
+    75% {
+        transform: rotate(20deg);
+    }
+}
+
+@-moz-keyframes foot1 {
+    25% {
+        -moz-transform: rotate(-20deg);
+    }
+    75% {
+        -moz-transform: rotate(20deg);
+    }
+}
+
+@-ms-keyframes foot1 {
+    25% {
+        -ms-transform: rotate(-20deg);
+    }
+    75% {
+        -ms-transform: rotate(20deg);
+    }
+}
+
+@-o-keyframes foot1 {
+    25% {
+        -o-transform: rotate(-20deg);
+    }
+    75% {
+        -o-transform: rotate(20deg);
+    }
+}
+
+@-webkit-keyframes foot1 {
+    25% {
+        -webkit-transform: rotate(-20deg);
+    }
+    75% {
+        -webkit-transform: rotate(20deg);
+    }
+}
+
+/*右脚*/
+.foot .ringhtfoot {
+    -webkit-animation: foot2 2s linear infinite;
+    -moz-animation: foot2 2s linear infinite;
+    -o-animation: foot2 2s linear infinite;
+    animation: foot2 2s linear infinite;
+}
+
+@keyframes foot2 {
+    25% {
+        transform: rotate(20deg);
+    }
+    75% {
+        transform: rotate(-20deg);
+    }
+}
+
+@-moz-keyframes foot2 {
+    25% {
+        -moz-transform: rotate(20deg);
+    }
+    75% {
+        -moz-transform: rotate(-20deg);
+    }
+}
+
+@-ms-keyframes foot2 {
+    25% {
+        -ms-transform: rotate(20deg);
+    }
+    75% {
+        -ms-transform: rotate(-20deg);
+    }
+}
+
+@-o-keyframes foot2 {
+    25% {
+        -o-transform: rotate(20deg);
+    }
+    75% {
+        -o-transform: rotate(-20deg);
+    }
+}
+
+@-webkit-keyframes foot2 {
+    25% {
+        -webkit-transform: rotate(20deg);
+    }
+    75% {
+        -webkit-transform: rotate(-20deg);
+    }
+}
+
+/*左手*/
+.hand .lefthand {
+    -webkit-animation: hand1 2s linear infinite;
+    -moz-animation: hand1 2s linear infinite;
+    -o-animation: hand1 2s linear infinite;
+    animation: hand1 2s linear infinite;
+}
+
+@keyframes hand1 {
+    25% {
+        transform: rotate(-70deg);
+    }
+    75% {
+        ransform: rotate(-47deg);
+    }
+}
+
+@-webkit-keyframes hand1 {
+    25% {
+        -webkit-transform: rotate(-70deg);
+    }
+    75% {
+        -webkit-transform: rotate(-47deg);
+    }
+}
+
+@-moz-keyframes hand1 {
+    25% {
+        -moz-transform: rotate(-70deg);
+    }
+    75% {
+        -moz-transform: rotate(-47deg);
+    }
+}
+
+@-ms-keyframes hand1 {
+    25% {
+        -ms-transform: rotate(-70deg);
+    }
+    75% {
+        -ms-transform: rotate(-47deg);
+    }
+}
+
+@-o-keyframes hand1 {
+    25% {
+        -o-transform: rotate(-70deg);
+    }
+    75% {
+        -o-transform: rotate(-47deg);
+    }
+}
+
+/*右手*/
+.hand .righthand {
+    -webkit-animation: hand2 2s linear infinite;
+    -moz-animation: hand2 2s linear infinite;
+    -o-animation: hand2 2s linear infinite;
+    animation: hand2 2s linear infinite;
+}
+
+@keyframes hand2 {
+    25% {
+        transform: rotate(-40deg);
+    }
+    75% {
+        ransform: rotate(-70deg);
+    }
+}
+
+@-webkit-keyframes hand2 {
+    25% {
+        -webkit-transform: rotate(-37deg);
+    }
+    75% {
+        -webkit-transform: rotate(-70deg);
+    }
+}
+
+@-webkit-keyframes hand2 {
+    25% {
+        -webkit-transform: rotate(-37deg);
+    }
+    75% {
+        -webkit-transform: rotate(-70deg);
+    }
+}
+
+@-moz-keyframes hand2 {
+    25% {
+        -moz-transform: rotate(-37deg);
+    }
+    75% {
+        -moz-transform: rotate(-70deg);
+    }
+}
+
+@-ms-keyframes hand2 {
+    25% {
+        -ms-transform: rotate(-37deg);
+    }
+    75% {
+        -ms-transform: rotate(-70deg);
+    }
+}
+
+@-o-keyframes hand2 {
+    25% {
+        -o-transform: rotate(-37deg);
+    }
+    75% {
+        -o-transform: rotate(-70deg);
+    }
+}
+
+/*嘴部动画*/
+.mouse .two {
+    -webkit-animation: a_mouse 3s ease-in infinite;
+    -moz-animation: a_mouse 3s ease-in infinite;
+    -o-animation: a_mouse 3s ease-in infinite;
+    animation: a_mouse 3s ease-in infinite;
+}
+
+@keyframes a_mouse {
+    50% {
+        top: 24px;
+        left: 30px;
+        border-bottom-left-radius: 24px;
+    }
+}
+
+@-ms-keyframes a_mouse {
+    50% {
+        top: 24px;
+        left: 30px;
+        border-bottom-left-radius: 24px;
+    }
+}
+
+@-moz-keyframes a_mouse {
+    50% {
+        top: 24px;
+        left: 30px;
+        border-bottom-left-radius: 24px;
+    }
+}
+
+@-o-keyframes a_mouse {
+    50% {
+        top: 24px;
+        left: 30px;
+        border-bottom-left-radius: 24px;
+    }
+}
+
+@-webkit-keyframes a_mouse {
+    50% {
+        top: 24px;
+        left: 30px;
+        border-bottom-left-radius: 24px;
+    }
+}
+
+/*腮红*/
+.red .lred, .red .rred {
+    -webkit-animation: l_red 3s ease-in infinite;
+    -moz-animation: l_red 3s ease-in infinite;
+    -o-animation: l_red 3s ease-in infinite;
+    animation: l_red 3s ease-in infinite;
+}
+
+@keyframes l_red {
+    40% {
+        background: #feb4b5;
+    }
+}
+
+@-ms-keyframes l_red {
+    40% {
+        background: #feb4b5;
+    }
+}
+
+@-moz-keyframes l_red {
+    40% {
+        background: #feb4b5;
+    }
+}
+
+@-o-keyframes l_red {
+    40% {
+        background: #feb4b5;
+    }
+}
+
+@-webkit-keyframes l_red {
+    40% {
+        background: #feb4b5;
+    }
+}
+
+/*眼睛*/
+.eye .lefteye .leye, .eye .righteye .reye {
+    -webkit-animation: eye 3s ease-in infinite;
+    -moz-animation: eye 3s ease-in infinite;
+    -o-animation: eye 3s ease-in infinite;
+    animation: eye 3s ease-in infinite;
+}
+
+@keyframes eye {
+    25%, 75% {
+        top: 0;
+        left: 18px;
+    }
+    50% {
+        top: 8px;
+        left: 30px;
+    }
+}
+
+@-ms-keyframes eye {
+    25%, 75% {
+        top: 0;
+        left: 18px;
+    }
+    50% {
+        top: 8px;
+        left: 30px;
+    }
+}
+
+@-moz-keyframes eye {
+    25%, 75% {
+        top: 0;
+        left: 18px;
+    }
+    50% {
+        top: 8px;
+        left: 30px;
+    }
+}
+
+@-o-keyframes eye {
+    25%, 75% {
+        top: 0;
+        left: 18px;
+    }
+    50% {
+        top: 8px;
+        left: 30px;
+    }
+}
+
+@-webkit-keyframes eye {
+    25%, 75% {
+        top: 0;
+        left: 18px;
+    }
+    50% {
+        top: 8px;
+        left: 30px;
+    }
+}
