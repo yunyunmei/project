@@ -1,0 +1,136 @@
+.shopping-card-item {
+    float: left;
+    width: 195px;
+    height: 265px;
+    overflow: hidden;
+    margin-top: 21px;
+    margin-left: 20px;
+}
+.ml{
+    margin-left: 0!important;
+}
+
+.shopping-card-wrapper{
+    display: none;
+}
+.shopping-card-item .shopping-card-imgwrapper {
+    position: relative;
+    width: 195px;
+    height: 265px;
+}
+.shopping-card-item .img {
+    display: inline-block;
+    text-decoration: none;
+    width: 195px;
+    height: 265px;
+}
+.shopping-card-item .shopping-card-imgwrapper .mask.top {
+    bottom: 42px;
+    height: 34px;
+    line-height: 34px;
+}
+.shopping-card-item .shopping-card-imgwrapper .mask {
+    display: block;
+    position: absolute;
+    bottom: 11px;
+    left: 10px;
+    height: 30px;
+    overflow: hidden;
+    width: 175px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #000;
+    text-align: center;
+    background: none !important;
+    background-image: -o-linear-gradient(rgba(255, 255, 255, .95) 0, rgba(255, 255, 255, .95) 100%) !important;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#d9ffffff, endColorstr=#d9ffffff) !important;
+}
+.shopping-card-imgwrapper .mask .bsTitle {
+    text-decoration: none;
+    margin-left: 10px;
+}
+.shopping-card-item .shopping-card-imgwrapper .cover {
+    position: absolute;
+    width: 4px;
+    height: 1px;
+    bottom: 41px;
+    left: 10px;
+    background: none !important;
+    background-image: -o-linear-gradient(rgba(255, 255, 255, .95) 0, rgba(255, 255, 255, .95) 100%) !important;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#d9ffffff, endColorstr=#d9ffffff) !important;
+}
+.shopping-card-item .shopping-card-imgwrapper .cover.right {
+    left: 181px;
+}
+.right {
+    float: right;
+}
+.shopping-card-item .shopping-card-imgwrapper .mask .bsTitle {
+    text-decoration: none;
+    margin-left: 10px;
+}
+.shopping-card-item .shopping-card-imgwrapper .mask .percentdesc {
+    color: #fe673d;
+    margin-left: 5px;
+}
+/*连接*/
+.shopping-card-item .shopping-bsword {
+    height: 82px;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: left;
+    text-decoration: none;
+    display: block;
+}
+.s-opacity-blank8 {
+    border-color: rgba(226, 226, 226, .45) !important;
+}
+/*连接的字体设置*/
+.shopping-card-item .shopping-bsword p {
+    font-size: 14px;
+    color: #000;
+    font-weight: bold;
+}
+.shopping-card-item .shopping-bsword span {
+    display: inline-block;
+    font-size: 14px;
+    color: #808080;
+    margin: 6px 0 11px;
+}
+.shopping-card-item .shopping-bsword .buttondesc {
+    font-size: 12px;
+    color: #0771fb;
+}
+
+/*返利商城*/
+.shopping-card-item .shopping-bsmall {
+    text-align: left;
+}
+a {
+    text-decoration: none;
+}
+.shopping-card-item .shopping-bsmall p {
+    font-size: 14px;
+    color: #000;
+    margin: 15px 0 0;
+    font-weight: bold;
+}
+.shopping-card-item .shopping-bsmall ul {
+    list-style: disc;
+    position: relative;
+}
+.shopping-card-item .shopping-bsmall ul li {
+    display: inline-block;
+    margin: 14px 0 0;
+
+    width: 97.5px;
+    float: left;
+    font-size: 14px;
+    list-style: square;
+    vertical-align: top;
+}
+.shopping-card-item .shopping-bsmall ul li a{
+    color: #666;
+}
+.shopping-card-item .shopping-bsmall ul li a:hover, .buttondesc:hover{
+    text-decoration: underline;
+}
