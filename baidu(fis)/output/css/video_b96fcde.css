@@ -1,0 +1,203 @@
+.ml{
+    margin-left: 0!important;
+}
+.video{
+    display: none;
+}
+.video-col {
+    float: left;
+    margin-left: 20px;
+    width: 195px;
+    height: 320px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    overflow: hidden;
+}
+
+.video-col .item-wrapper {
+    position: relative;
+}
+
+.video-col .video-item {
+    width: 195px;
+    text-align: left;
+}
+
+.video-col .video-item .v-pic-1 {
+    width: 195px;
+    height: 270px;
+}
+
+.video-col .video-item .v-pic a {
+    cursor: pointer;
+    text-decoration: none;
+}
+/*图片设置*/
+.video-col .video-item .pic-hover img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    -moz-transition: transform .3s;
+    transition: transform .3s;
+    -webkit-transition: transform .3s;
+    -o-transition: transform .3s;
+    -webkit-transition: transform .3s;
+    backface-visibility: hidden;
+}
+/*背景*/
+.video-item .v-pic .bg {
+    position: absolute;
+    height: 40px;
+    width: 195px;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.5) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.5)));
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.5) 100%);
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.5) 100%);
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.5) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.5) 100%);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.video-col .v-pic .v-tag {
+    z-index: 3;
+    font-size: 12px;
+    color: #fff;
+    position: absolute;
+    right: 5px;
+    bottom: 35px;
+}
+
+.video-item .v-pic .tag-sort4 {
+    background-image: url(/images/title_b900ca2.png);
+    background-position: -126px 0;
+}
+/*字体设置*/
+.video-col .video-item-1 .v-txt {
+    height: 49px;
+    width: 175px;
+    overflow: hidden;
+    padding: 0 9px;
+}
+
+.video-item .v-txt {
+    display: inline-block;
+    text-decoration: none;
+    zoom: 1;
+    background: #F5F5F5;
+    border: 1px solid #F1F1F1;
+    border-top: none;
+}
+
+.s-opacity-blank3 {
+    border-color: rgba(240, 240, 240, .45) !important;
+}
+
+.s-opacity-background1 {
+    background: none !important;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(243, 243, 243, .45)), to(rgba(243, 243, 243, .45))) !important;
+    background-image: -moz-linear-gradient(rgba(243, 243, 243, .45) 0, rgba(243, 243, 243, .45) 100%) !important;
+    background-image: -ms-linear-gradient(rgba(243, 243, 243, .45) 0, rgba(243, 243, 243, .45) 100%) !important;
+    background-image: -o-linear-gradient(rgba(243, 243, 243, .45) 0, rgba(243, 243, 243, .45) 100%) !important;
+    background-image: linear-gradient(rgba(243, 243, 243, .45) 0, rgba(243, 243, 243, .45) 100%) !important;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#73f3f3f3, endColorstr=#73f3f3f3) !important;
+}
+
+.video-item-1 .v-txt .text {
+    display: block;
+    height: 14px;
+    margin-top: 6px;
+}
+
+.video-item .v-txt .text {
+    font-size: 14px;
+    color: #333;
+    display: inline-block;
+    text-align: left;
+    max-width: 195px;
+    text-decoration: none;
+}
+
+.video-col .video-item .v-txt .text a {
+    font-size: 14px;
+    color: #333;
+    max-width: 195px;
+    display: inline-block;
+    text-align: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+/*分数*/
+.video-item-1 .v-txt .score {
+    font-size: 13px;
+    color: #999;
+    margin-top: 6px;
+    _margin-top: 1px;
+}
+/*星级*/
+.video-item-1 .v-txt .score .score-star {
+    display: inline-block;
+    background-repeat: repeat-x;
+    height: 13px;
+    width: 65px;
+    background-image: url(/images/star_834bc65.png);
+    background-repeat: repeat-x;
+    vertical-align: middle;
+    margin-bottom: 4px;
+    position: relative;
+    margin-right: 5px;
+}
+.video-item-1 .v-txt .score .score-star .star-active {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    height: 13px;
+    background-image: url(/images/star_834bc65.png);
+    background-repeat: repeat-x;
+    background-position: 0 -13px;
+    vertical-align: middle;
+    margin-bottom: 4px;
+}
+
+
+.v-pic-1 .nointerest {
+    left: 66px;
+    top: 102px;
+}
+
+.item-wrapper .dustbin {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background: url(/images/video_cc767ab.png) no-repeat;
+    background-position: -48px -2px;
+    width: 18px;
+    height: 18px;
+    z-index: 1;
+    display: none;
+}
+
+.black {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: #000;
+    opacity: .4;
+}
+
+
+
+
+
+
+
+
+
+
+
+

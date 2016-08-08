@@ -1,0 +1,66 @@
+{
+    "res": {
+        "css/baidu.css": {
+            "uri": "/css/baidu.css",
+            "type": "css",
+            "pkg": "p1"
+        },
+        "css/myfoucs.css": {
+            "uri": "/css/myfoucs.css",
+            "type": "css",
+            "pkg": "p1"
+        },
+        "css/navigation.css": {
+            "uri": "/css/navigation.css",
+            "type": "css",
+            "pkg": "p1"
+        },
+        "css/recommend.css": {
+            "uri": "/css/recommend.css",
+            "type": "css",
+            "pkg": "p1"
+        },
+        "css/shopping.css": {
+            "uri": "/css/shopping.css",
+            "type": "css",
+            "pkg": "p1"
+        },
+        "css/video.css": {
+            "uri": "/css/video.css",
+            "type": "css",
+            "pkg": "p1"
+        },
+        "js/jquery-2.2.4.min.js": {
+            "uri": "/js/jquery-2.2.4.min.js",
+            "type": "js",
+            "pkg": "p0"
+        },
+        "js/style.js": {
+            "uri": "/js/style.js",
+            "type": "js",
+            "pkg": "p0"
+        }
+    },
+    "pkg": {
+        "p0": {
+            "uri": "/pkg/aio.js",
+            "type": "js",
+            "has": [
+                "js/jquery-2.2.4.min.js",
+                "js/style.js"
+            ]
+        },
+        "p1": {
+            "uri": "/pkg/aio.css",
+            "type": "css",
+            "has": [
+                "css/baidu.css",
+                "css/myfoucs.css",
+                "css/navigation.css",
+                "css/recommend.css",
+                "css/shopping.css",
+                "css/video.css"
+            ]
+        }
+    }
+}

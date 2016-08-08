@@ -1,0 +1,126 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    min-width: 1000px;
+    cursor: default;
+    text-align: center;
+    font: 12px arial;
+    color: #000;
+    overflow-y: scroll;
+    position: relative;
+    z-index: 0
+}
+
+div {
+    display: block;
+}
+
+img {
+    border: 0;
+}
+.clearfix:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+.clearfix{
+    zoom: 1;
+}
+
+.navigation{
+    padding: 10px 0 0 0;
+    position: absolute;
+    display: none;
+}
+/*猜你喜欢*/
+.guss-like{
+    margin: 0 auto;
+}
+.guss-like h1{
+    margin: 8px 0 4px;
+    padding: 0;
+    font-size: 14px;
+    text-align: left;
+}
+/*喜欢的网站*/
+.nav-item {
+    display: inline-block;
+    float: left;
+    position: relative;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+.nav-item .nav-block {
+    height: 58px;
+    line-height: 58px;
+    width: 126px;
+    position: relative;
+    display: block;
+    background-color: #fcfcfc;
+    border: 1px solid #fcfcfc;
+}
+/*喜欢的网站的小图标*/
+.guss-like .nav-item a img {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    margin-top: -8px;
+    height: 16px;
+    width: 16px;
+}
+.guss-like .nav-item .nav-txt {
+    position: absolute;
+    text-align: left;
+    left: 44px;
+    color: #333;
+    font-size: 14px;
+    padding: 0;
+    max-width: 71px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline-block;
+}
+.guss-like .nav-item .top-line {
+    position: absolute;
+    top: 0;
+    height: 1px;
+    background-color: #38f;
+}
+/*最高返利*/
+.guss-like .nav-item .rebate{
+    position: absolute;
+    display: none;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    font-size: 12px;
+    text-align: center;
+    height: 18px;
+    line-height: 18px;
+    color: #fff;
+    background: #ff8300;
+}
+.guss-like .nav-item .rebate a {
+    font-size: 12px;
+    color: #fff;
+    text-decoration: underline;
+}
+/*返利的logo*/
+.nav-item .fanli-tag {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    background: url("/images/return_4b08a91.png") repeat 0 0;
+}
+.fl{
+    margin-right: 0;
+}
