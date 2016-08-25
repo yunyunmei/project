@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+
+    <title>新疆旅游简介</title>
+
+    <!-- 载入所有的组件资源 -->
+    <script type="text/javascript" src="js/lib/jquery.js"></script>
+    <script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.fullPage.js"></script>
+
+
+    <!-- H5对象：进行内容管理 -->
+
+    <script type="text/javascript" src="js/H5.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/H5.css">
+
+    <script type="text/javascript" src="js/H5_loading.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/H5_loading.css">
+
+    <!-- 页面逻辑的样式 -->
+    <style type="text/css">
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .h5_page {
+            background-image: url(imgs/page_bg.png);
+        }
+
+        .h5_page_face {
+            background-image: url(imgs/face_bg.png);
+        }
+
+        .h5_component_name_slogan {
+            -webkit-animation: rock 2s infinite 2s;
+        }
+
+        .h5_component_name_star {
+            display: block;
+            height: 80px;
+            width: 116px;
+            margin: 15% 2% 5% 3%;
+            float: left;
+            position: static !important;
+            color: #fff;
+            line-height: 180px;
+            text-align: center;
+        }
+
+        .h5_component_name_enter_small {
+            border-radius: 50%;
+            background-color: rgba(76, 114, 215, 0.51);
+            width: 40px;
+            height: 20px;
+            padding: 20px 10px;
+            line-height: 20px;
+            text-align: center;
+            color: #fff;
+        }
+        .h5_component_name_enter_small:after{
+            content: ' ';
+            text-indent: -999px;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 50%;
+            top: 50%;
+            margin-left: -50%;
+            margin-top: -50%;
+            border-radius: 50%;
+            -webkit-opacity:.5;
+            background-color: inherit;
+            -webkit-animation: breathe 3s infinite ease-in-out .5s;
+        }
+        @-webkit-keyframes breathe{
+            0% {
+                -webkit-transform:scale(.5);
+                -webkit-opacity:.9;
+            }
+            95%{
+                -webkit-transform:scale(1.5);
+                -webkit-opacity:0;
+            }
+            100%{
+                -webkit-transform:scale(.9);
+                -webkit-opacity:0;
+            }
+        }
+
+        .h5_component_name_enter {
+            border-radius: 50%;
+            background-color: rgba(76, 114, 215, 0.51);
+            width: 160px;
+            height: 160px;
+            left: 50%;
+            top: 60%;
+            margin: -50px 0 0 -80px;
+            line-height: 160px;
+            text-align: center;
+            color: #fff;
+        }
+
+        @-webkit-keyframes rock {
+            0% {
+                transform: rotate(0deg)
+            }
+            5% {
+                transform: rotate(3deg)
+            }
+            10% {
+                transform: rotate(-4deg)
+            }
+            15% {
+                transform: rotate(3deg)
+            }
+            20% {
+                transform: rotate(-2deg)
+            }
+            25% {
+                transform: rotate(1deg)
+            }
+            30% {
+                transform: rotate(-1deg)
+            }
+            70% {
+                transform: rotate(0deg)
+            }
+            100% {
+                transform: rotate(0deg)
+            }
+        }
+
+        .h5_component_name_caption {
+            background-image: url(imgs/page_caption_bg.png);
+            width: 283px;
+            height: 160px;
+            text-align: center;
+            line-height: 140px;
+            font-size: 20px;
+            color: #fff;
+        }
+
+        .h5_component_name_back {
+            top: 30px;
+            -webkit-animation: back 2s infinite 2s;
+        }
+
+        @-webkit-keyframes back {
+            50% {
+                top: 20px;
+            }
+        }
+    </style>
+
+
+<body>
+
+<div class="loading">
+
+    <div class="double-bounce1"></div>
+    <div class="double-bounce2"></div>
+
+    <div id="rate">0%</div>
+
+</div>
+
+
+<!-- 加载 H5组件 相关资源 -->
+<script type="text/javascript">
+
+    var res = [
+        'Base', 'Bar', 'Bar_v', 'Point', 'Polyline',
+        'Radar', 'Pie', 'Ring'
+    ];
+    var html = [];
+    for (s in res) {
+        html.push('<script type="text/javascript" src="js/H5Component' + res[s] + '.js"><\/script>');
+        html.push('<link rel="stylesheet" type="text/css" href="css/H5Component' + res[s] + '.css">');
+
+    }
+    document.write(html.join(''));
+</script>
+<!-- 主要逻辑 -->
+<script type="text/javascript">
+    var star_data = [
+        {
+            name: '楼兰',
+            bg: 'loulan',
+            data: '地理位置位于今天中国新疆巴音郭楞蒙古族自治州若羌县北境，罗布泊以西，孔雀河道南岸7公里处。' +
+            '　　景点特色楼兰古城曾经是人们生息繁衍的乐园。她身边有烟波浩淼的罗布泊，她门前环绕着清澈的河流，人们在碧波上泛舟捕鱼，在茂密的胡杨林里狩猎，人们在沐浴着大自然的恩赐'
+        },
+        {
+            name: '葡萄沟',
+            bg: 'putaogou',
+            data: '火洲闻名遐尔的“清凉世界”-----葡萄沟，位于吐鲁番市东北13千米的火焰山峡谷中。该沟是一条不太深的切蚀沟，南北长8千米，东西宽约0.5千米，最宽处方可达2千米，一条小溪流贯其间，沟侧沿隙中时有汩汩泉水渗出。沟中绿荫蔽日，满沟全是层层叠叠的葡萄架，花果树木点缀其间，村舍农家错落有致，山坡高处还有许多空心土垒砌专门晾晒葡萄干的“晾房”。'
+        },
+        {
+            name: '吐鲁番',
+            bg: 'tulufan',
+            data: '　　　　吐鲁番古称姑师，是古丝绸之路上的重镇，位于新疆维吾尔自治区中部，北隔天山与乌鲁木齐市相邻。吐鲁番历史悠久、美丽神奇，自两汉以来一直是我国西域地区政治、经济、文化中心，丝绸之路上的重镇。'
+        },
+        {
+            name: '库车王府',
+            bg: 'kuche',
+            data: '“库车王府”位于新疆库车县城，是1759年清朝乾隆皇帝为表彰当地维吾尔族首领鄂对协助平定大小和卓叛乱的功绩，专门派遣内地汉族工匠建造而成。20世纪初，原“库车王府”仅存部分房屋和城墙，因而，2004年库车县政府投资1300万元，根据达吾提·买合苏提的回忆，在原址重建“库车王府”。'
+        },
+        {
+            name: '可可托海',
+            bg: 'keke',
+            data: '可可托海镇位于新疆维吾尔自治区北部富蕴县城东北48公里的阿尔泰山间。额尔齐斯河刚好从镇中穿流而过，便是镇名的来历。可可托海，哈萨克语的意思为“绿色的丛林”。蒙古语，意为“蓝色的河湾”。这里是全国第二冷极，富蕴的水电部门测出了零下60℃的数据，但未被认可。而在此期间，黑龙江的漠河气象站也测出零下60℃的低温，于是漠河便被定为中国第一寒冷区，而富蕴就只有屈居第二了。'
+        },
+        {
+            name: '天山',
+            bg: 'tianshan',
+            data: '天山神秘大峡谷位于独库公路旁，距离库车县城约70公里，是天山支脉克孜利亚山中的一条峡谷。维语中，“克孜利亚”意为“红色的山崖”。那些红褐色岩石正是在亿万年的风雕雨刻之下，才形成今日的“神秘大峡谷”。站在谷底仰视高山，只觉得陡峭的峰峦似乎随时随刻都会压将下来，令人眩晕。'
+        },
+        {
+            name: '博斯腾湖',
+            bg: 'bosi',
+            data: '古称“西海”、唐谓“鱼海”，清代中期定名为博斯腾湖，位于焉耆盆地东南面博湖县境内，是中国最大的内陆淡水吞吐湖。博斯腾蒙古语，意为站立，因三道湖心山屹立于湖中心而得名。湖水面距博湖县城仅14公里，距焉耆县城24公里，湖面海拔1048米，东西长55公里，南北宽25公里，略呈三角形，大湖面积988平方公里。'
+        },
+        {
+            name: '那拉提',
+            bg: 'nalati',
+            data: '那拉提草原是发育在第3纪古洪积层上的中山地草场，东南接那拉提高岭，势如屏障，西北沿巩乃斯河上游谷地断落，地势大面积倾斜，山泉密布，溪流纵横。缘山脚冲沟深切，河道交错，森林茂密，莽原展缓起伏，松塔沿沟擎柱，还有毡房点点，畜群云移，是巩乃斯草原的重要夏牧场。'
+        },
+        {
+            name: '罗布泊',
+            bg: 'luobu',
+            data: '新疆是个多湖泊的省区，湖泊总面积达到10000平方千米，仅次于西藏、青海、江苏居全国第4位。'
+        },
+        {
+            name: '五彩滩',
+            bg: 'wucai',
+            data: '五彩滩是国家4A级景区，位于新疆北端，属阿勒泰地区，布尔津县境内，地处我国唯一注入北冰洋的额尔齐斯河北岸的一二级阶地上，海拔480米，往哈巴河县方向，距布尔津县城24公里，也是前往喀纳斯湖景区的必经之路。有柏油公路直达，区位优势较好。'
+        },
+        {
+            name: '克州冰川公园',
+            bg: 'kezhou',
+            data: '克州冰川公园是集雪山、冰川、瀑布、森林、草原为一体，其景色纯净，被国外地质专家誉为“西域第一自然生态景观”。'
+        },
+        {
+            name: '怪石峪',
+            bg: 'guaishi',
+            data: '怪石峪风景名胜区是世界上最大的花岗斑岩象形怪石景观区，中国国家AAAA级风景名胜区。'
+        },
+
+    ];
+    var star_detail_data = [
+        '楼兰探险异常艰险，地表崛起的盐壳和错综复杂的风蚀“雅丹”地貌，极其艰队难行，越野车每小时平均只有前进二三千米，平均每两分钟汽车就得转三个急弯。罗布泊地区的地貌广达3500平方千米，是古城的一大天然屏障。这里天气冷热变化急剧，夏季午后气温上升至摄氏三四十度，燠热难耐，而凌晨气温又可下降到0度以下，奇寒无比。罗布泊地区年降水量仅10毫米左右，而蒸发量可达3000多毫米，蒸发远超过降水二三百倍，奇旱无比。这里风沙肆虐，沙暴滚滚，堪称0。然而有险才有奇，神奇的罗布泊、险峻的雅丹龙城地貌以及各种沙漠奇景为楼兰探险倍增了许多新奇刺激，足令探险者终身难忘。',
+        '酸甜可口，在国际市场上享有很高的声誉，被称做“中国绿珍珠”。设在葡萄沟与吐鲁番市间的果酒厂，引进了国内一流的葡萄酒酿造、贮存、灌装的生产流水线和葡萄、哈蜜瓜、桑椹罐头和浓缩汁软包装生产流水线，及一个可容纳数千吨瓜果的大型冷藏库。这里生产的吐鲁番全汁葡萄酒畅销全国。在葡萄沟深处，专为中外旅游者修建了一处占地数千平方米的葡萄游乐园，这里浓荫蔽日，铺绿叠翠，泉流溪涌，曲径通幽，甜蜜的葡萄，醉人的歌舞，令人心旷神怡',
+        '吐鲁番有各类古代文化遗迹70多处，至近代包括原始遗址、故城遗址、古墓群、石窟寺、烽燧驿站、岩画等等，其中有5处全国重点文物保护单位。出土文物数以万计，准确数字已难统计，许多已流散海外，保存在德国、日本、俄国、英国、印度、朝鲜、美国等国家的博物馆里，这些文物中以代表丝绸之路的文物丝绸织品和具有重要史料价值的古文书最为著名。',
+        '库车王府是1759年清朝乾隆皇帝为表彰当地维吾尔族首领鄂对协助平定大小和卓叛乱的功绩，专门派遣内地汉族工匠建造而成。到本世纪初，原“库车王府”仅存部分房屋和城墙。2004年，库车县政府投资1500万元，根据库车最后一位王爷达吾提·买合苏提的回忆，在原址重建了“库车王府”，为末代“库车王”建造了专门住所，并于2006年3月26日重新对外开放。',
+        '在距可可托海镇镇10公里处有1931年8月11日地震遗留下的一条规模宏大的地震断裂带，它是世界上最罕见、最完好的断裂带之一；有申报国家级含几十种矿物质的3号矿坑地质遗迹；额尔齐斯河水源头自然风光；伊雷木湖湖水清澈透明，夏季气候凉爽宜人，是度假的好去处；独特的冬季冰雪资源，有神钟山、大石门、小石门、温泉、神泉、仙人洞、奇山怪石等，也是寻找碧玺、海兰、水晶、雪莲、冬虫夏草等宝地。',
+        '峡谷中神秘的阿艾石窟距谷口不足2公里，高悬于绝壁之上，最初仅可攀着30多米高的悬梯而上，如今旁边已经加建了石阶栈道。根据考证，石窟建于盛唐初期。石窟很小，深不足5米，约一人高，洞顶呈拱形。窟内三面皆有残存的壁画，而壁画上竟然罕有地出现了汉字，与古西域地区其他数百座石窟相迥异，充分显示汉文化的痕迹。',
+        '大湖水域辽阔，烟波浩渺，遥望对岸，水天一色，登游艇畅游大湖，丽日蓝天，波光潋滟，轻风佛面，心旷神怡；大风起，惊涛排空，宛若怒海；冬至春初，千里冰封，银光如镜。小湖区各自既相对独立又有汊流相通，夏秋季节，湖周芦苇、香蒲生长茂密，湖水清澈碧绿，荷花，睡莲等各种水草花木竞相开放，水鸟筑巢于水面随处可见，泛舟湖中，各种水鸟不时从身边、头顶掠过，鸟鸣鱼跃，荷香沁脾，品尝鱼餐鱼宴，其乐无穷。博湖既是新疆的渔业基地之一，又是我国四大芦苇产地之一。 ',
+        '那拉提草原系亚高山草甸植物，由茂盛而绚丽的中生杂草与禾草构成植株高达50-60厘米，覆盖度可达75-90%。仲春时节，草高花旺，碧茵似锦，极为美丽。那拉提年降水量可达800毫米。有利于牧草的生长，载畜量很高，历史上的那拉提草原有“鹿苑”之称。',
+        '湖泊星罗棋布地颁在高山、高原、盆地、沙漠中，不少湖泊还串联在河流上。湖泊的成因复杂，有断层湖、冰川湖、堰塞湖、风蚀湖、河成湖等等，许多湖泊还是复合成因。湖面颁的高度也相差悬殊，昆仑山地里的许多湖泊，海拔高度都在4000米以上，和田县境内的阿克萨依湖海拔高达4963实；而艾比湖的湖面海拔高程只有189米，吐鲁番的艾丁湖湖面高程为-155米，成了中国陆地的最低点。湖水矿化度普遍偏高，大都为咸水湖或盐湖，但也有水质醇甜的淡水湖。据初步统计，新疆面积大于1平方千米的湖泊有139个，面积大于10平方千米的湖泊有30个，面积超过100平方千米的也有11个之多，而尢以博斯腾湖、乌伦古湖、赛里木湖、艾比湖、艾丁湖、罗布泊（已干涸）最负盛名。高山旅游胜地喀纳斯湖，国家风景名胜区博格达天池以及国家自然保护区天鹅湖则以其优美的旅游风光闻名中外。  ',
+        '五彩滩一河两岸，南北各异。南岸，有绿洲、沙漠与蓝色的天际相合，风光尽收眼底。北岸，它是悬崖式的雅丹地貌，山势起伏、颜色多变，其是由激猛的流河侵蚀切割以及狂风侵蚀作用而共同形成。由于河岸岩层间抗风化能力的强弱程度不一而形成了参差不齐的轮廓，这里的岩石颜色多变，且在落日时分的阳光照射下，岩石的色彩以红色为主，间以绿、黄、白、黑及过渡色彩，色彩斑斓、娇艳妩媚，因此被称作“五彩滩”并号称是“新疆最美的雅丹地貌”。每当刮风的时候，沟壑里、岩石下，到处都会发出长短不一、高低不同的怪叫声，让人觉得神秘莫测。',
+        '克州冰川公园主要包括雪山景观、冰川景观、雪崩景观、瀑布景观、玉女景观、飞天湖景观、《玛纳斯》勇士景观、仙女湖等八景，是将雪山、冰川、瀑布、河流、雪崩、草地揉为一体，加上山坡上成群的牛羊和柯尔克孜牧民的圆形毡房，使这块伟大圣洁的处女地充满了自然美，没有一丝半缕的人工雕琢的痕迹，一切都是纯自然的。是国内外游客度假休闲、疗养避暑、探险猎奇、旅游观光的胜地。',
+        '怪石峪景区被十多条南北和东西走向的山泉溪流切割成风光独特迥异、各具奇趣的山谷，其中主要的有空灵佛谷、仙子瀑布谷、突厥古墓谷、和平飞鸽谷、红金龙谷、野大葱谷等七条山谷。而以一条沿东西走向的溪流而行的公路为主轴展开几条游览线路，把散布的景点如珍珠般串联起来。'
+    ]
+    $(function () {
+
+        var h5 = new H5();
+        var list_index = 6;
+
+//        h5.whenAddPage = function(){
+//            this.addComponent('slide_up',{
+//                bg:'imgs/footer.png',
+//                css:{
+//                    opacity:0,
+//                    left:0,bottom:-20,
+//                    width:'100%',height:'20px',zIndex:999
+//                },
+//                animateIn:{
+//                    opacity:1,bottom:'-1px'
+//                },
+//                animateOut:{
+//                    opacity:0,bottom:'-20px'
+//                },
+//                delay:500
+//            });
+//        }
+
+        h5
+                .addPage('face')
+                .addComponent('logo', {
+                    center: true,
+                    width: 395,
+                    height: 130,
+                    text: '新疆',
+                    css: {opacity: 0, color: '#fffff', fontSize: '50px', fontWeight: 'block', textAlign: 'center'},
+                    animateIn: {top: 100, opacity: 1},
+                    animateOut: {top: 0, opacity: 0},
+                })
+                .addComponent('slogan', {
+                    center: true,
+                    width: 365,
+                    height: 99,
+                    text: '   中国面积最大的省级行政区',
+                    css: {opacity: 0, top: 180, color: '#FBFF7B', fontSize: '30px', testAlign: 'center'},
+                    animateIn: {left: '50%', opacity: 1},
+                    animateOut: {left: '0%', opacity: 0},
+                    delay: 500
+                })
+                .addComponent('face_img_left', {
+                    width: 370,
+                    height: 493,
+                    bg: 'imgs/face_img_left.png',
+                    css: {opacity: 0, left: -50, bottom: -50},
+                    animateIn: {opacity: 1, left: 0, bottom: 0},
+                    animateOut: {opacity: 0, left: -50, bottom: -50},
+                    delay: 1000
+                })
+                .addComponent('face_img_right', {
+                    width: 276,
+                    height: 449,
+                    bg: 'imgs/face_img_right.png',
+                    css: {opacity: 0, right: -50, bottom: -50},
+                    animateIn: {opacity: 1, right: 0, bottom: 0},
+                    animateOut: {opacity: 0, right: -50, bottom: -50},
+                    delay: 1000
+                })
+                .addPage()
+                .addComponent('caption', {text: '新疆简介'})
+                .addComponent('text', {
+                    width: 500,
+                    height: 30,
+                    center: true,
+                    text: '新疆-古丝绸之路的必经之路',
+                    css: {
+                        opacity: 0, textAlign: 'center', color: 'red', fontSize: '26px'
+                    },
+                    animateIn: {opacity: 1, top: 120},
+                    animateOut: {opacity: 0, top: 240},
+                })
+                .addComponent('description', {
+                    center: true,
+                    width: 481,
+                    height: 295,
+                    bg: 'imgs/description_bg.gif',
+                    css: {
+                        opacity: 0,
+                        padding: '15px 10px 10px 10px',
+                        color: '#fff',
+                        fontSize: '15px',
+                        lineHeight: '18px',
+                        textAlign: 'justify',
+                        top: 250
+                    },
+                    text: ' 新疆维吾尔自治区，简称新，位于中国西北边陲，面积166万平方公里，占中国国土总面积的六分之一，是中国面积最大的省级行政区。',
+                    animateIn: {opacity: 1, top: 190},
+                    animateOut: {opacity: 0, top: 240},
+                    delay: 1000
+                })
+                .addComponent('people', {
+                    center: true,
+                    width: 515,
+                    height: 305,
+                    bg: 'imgs/p1_people.png',
+                    css: {
+                        opacity: 0,
+                        bottom: 0
+                    },
+                    animateIn: {opacity: 1, bottom: 40},
+                    animateOut: {opacity: 0, bottom: 0},
+                    delay: 500
+                })
+
+                .addPage()
+                .addComponent('caption', {text: '主要民族'})//polyline
+                .addComponent('polyline', {
+                    type: 'polyline',
+                    data: [['维族', .45, '#ff7676'], ['汉族', .4], ['哈萨克族', .07, 'blue'], ['回族', .045], ['柯尔克孜', .01], ['蒙古族', .01], ['其他名族', '.02']],
+                    width: 530,
+                    height: 300,
+                    center: true,
+                    css: {opacity: 0, top: 200},
+                    animateIn: {opacity: 1, top: 250},
+                    animateOut: {opacity: 0, top: 100},
+                })
+                .addComponent('msg', {
+                    text: '维吾尔族占到45%',
+                    css: {
+                        opacity: 0, top: 160,
+                        textAlign: 'center', width: '100%', color: '#ff7676'
+                    },
+                    animateIn: {opacity: 1},
+                    animateOut: {opacity: 0}
+                })
+
+                .addPage() //bar（bar_v）
+                .addComponent('caption', {text: '主要民族'})
+                .addComponent('bar',
+                        {
+                            type: 'bar',
+
+                            width: 530,
+                            height: 600,
+                            data: [['维族', .45, '#ff7676'], ['柯尔克孜', .01], ['哈萨克族', .065, '#62FCFF'], ['回族', .045], ['蒙古族', .01], ['汉族', .4], ['其他名族', '.02']],
+                            css: {
+                                top: 100,
+                                opacity: 0
+                            },
+                            animateIn: {
+                                opacity: 1,
+                                top: 200,
+                            },
+                            animateOut: {
+                                opacity: 0,
+                                top: 100,
+                            },
+                            center: true,
+                        }
+                )
+                .addComponent('msg', {
+                    text: '汉族占到40%',
+                    css: {
+                        opacity: 0, bottom: 120,
+                        textAlign: 'center', width: '100%', color: '#ff7676'
+                    },
+                    animateIn: {opacity: 1},
+                    animateOut: {opacity: 0}
+                });
+
+//                .addPage() //（bar_v）
+//                .addComponent('caption',{text:'前端开发课程'})
+//                .addComponent('bar',
+//                        {
+//                            type : 'bar_v',
+//                            width : 530,
+//                            height : 400,
+//                            data:[
+//                                ['Js' , .4  ,'#ff7676'],
+//                                ['CSS3' , .1 ],
+//                                ['HTML5' , .2  ],
+//                                ['PHP' , .05  ],
+//                                ['jQuery' , .35 ]
+//                            ],
+//                            css : {
+//                                top:220,
+//                                opacity:0
+//                            },
+//                            animateIn:{
+//                                opacity:1,
+//                                top:200,
+//                            },
+//                            animateOut:{
+//                                opacity:0,
+//                                top:220,
+//                            },
+//                            center : true
+//                        }
+//                )
+//                .addComponent('msg',{
+//                    text:'汉族 占到40%',
+//                    css:{
+//                        opacity:0,top:180,
+//                        textAlign:'center',width:'100%',color:'#ff7676'
+//                    },
+//                    animateIn:{ opacity:1},
+//                    animateOut:{ opacity:0}
+//                })
+//
+//                .addPage()
+//                .addComponent('caption',{text:'后端开发课程'})//radar
+//
+//                .addComponent('radar',{
+//                    type : 'radar',
+//                    width : 400,
+//                    height : 400,
+//                    data:[
+//                        ['Js' , .9  ,'#ff7676'],
+//                        ['CSS3' , .8 ],
+//                        ['HTML5' , .7  ],
+//                        ['PHP' , .6  ],
+//                        ['jQuery' , .5 ]
+//                    ],
+//                    css : {
+//                        top:100,
+//                        opacity:0
+//                    },
+//                    animateIn:{
+//                        opacity:1,
+//                        top:200,
+//                    },
+//                    animateOut:{
+//                        opacity:0,
+//                        top:100,
+//                    },
+//                    center : true,
+//                })
+//                .addPage()
+//                .addComponent('caption',{text:'课程报名人数过万'})//ring
+//                .addComponent('ring-all',{
+//                    type : 'ring',center : true,
+//                    width : 300,height : 300,
+//                    data:[['总课程' , .7  ,'#ff7676']],
+//                    css : { top:120,opacity:0 ,fontSize:'30px'},
+//                    animateIn: { opacity:1},
+//                    animateOut:{ opacity:0},
+//                })
+//                .addComponent('msg',{
+//                    text:'不同课程报名人数超过一万占比',
+//                    css:{
+//                        opacity:0,top:300,
+//                        textAlign:'center',width:'100%',color:'#ff7676'
+//                    },
+//                    animateIn:{ opacity:1},
+//                    animateOut:{ opacity:0},
+//                    delay:1800,
+//                })
+//                .addComponent('ring-1',{
+//                    type : 'ring',center : true,
+//                    width : 140,height : 140,
+//                    data:[['前端开发' , .4  ,'darkorange']],
+//                    css : { left:30,bottom:110,opacity:0,fontSize:'12px' },
+//                    animateIn: { opacity:1},
+//                    animateOut:{ opacity:0},
+//                })
+//                .addComponent('ring-2',{
+//                    type : 'ring',
+//                    width : 140,height : 140,
+//                    data:[['后端开发' , .3  ,'darkorange']],
+//                    css : { left:30,bottom:110,opacity:0,fontSize:'12px' },
+//                    animateIn: { opacity:1},
+//                    animateOut:{ opacity:0},
+//                })
+//                .addComponent('ring-3',{
+//                    type : 'ring',
+//                    width : 140,height : 140,
+//                    data:[['移动开发' , .2  ,'darkorange']],
+//                    css : { right:30,bottom:110,opacity:0,fontSize:'12px' },
+//                    animateIn: { opacity:1},
+//                    animateOut:{ opacity:0},
+//                })
+//                .addComponent('ring-3',{
+//                    type : 'ring',
+//                    width : 140,height : 140,
+//                    data:[['数据处理' , .1  ,'darkorange']],
+//                    css : { left:70,bottom:40,opacity:0,fontSize:'12px' },
+//                    animateIn: { opacity:1},
+//                    animateOut:{ opacity:0},
+//                })
+//                .addComponent('ring-3',{
+//                    type : 'ring',
+//                    width : 140,height : 140,
+//                    data:[['图像处理' , .1  ,'darkorange']],
+//                    css : { right:70,bottom:40,opacity:0,fontSize:'12px' },
+//                    animateIn: { opacity:1},
+//                    animateOut:{ opacity:0},
+//                })
+
+//                .addPage()
+//                .addComponent('caption',{text:'课程难度分布'})//point
+//                .addComponent('point',{
+//                    type : 'point',
+//                    width : 300,
+//                    height : 300,
+//                    data:[
+//                        ['中级' , .4  ,'#ff7676'],
+//                        ['初级' , .2  ,'#ffa3a4', 0 ,'-60%'],
+//                        ['高级' , .3  ,'#99c1ff', '50%' ,'-120%']
+//                    ],
+//                    css : {
+//                        bottom:'20%'
+//                    },
+//                    center : true,
+//                })
+        var list = h5.addPage('list');
+
+        for (var i = 0; i < 12; i++) {
+            list.addComponent('star star_' + i, {
+                'text': star_data[i].name,
+                'bg': 'imgs/' + star_data[i].bg + '.png',
+                css: {
+                    '-webkit-animation': 'rock 12s infinite ' + (i + 2) + 's'
+                },
+                onclick: (function (i) {
+                    return function () {
+                        $.fn.fullpage.moveTo(list_index + i)
+                    }
+                })(i)
+            })
+        }
+
+        for (var i = 0; i < 12; i++) {
+            h5.addPage('star')
+                    .addComponent('detail_icon', {
+                        width: 300,
+                        height: 300,
+                        center: true,
+                        css: {top: '50px'},
+                        'bg': 'imgs/' + star_data[i].bg + '.png',
+                    })
+                    .addComponent('detail detail_' + i, {
+                        'text': star_data[i].name,
+                        css: {
+                            textAlign: 'center',
+                            width: '100%',
+                            top: '175px'
+                        }
+                    })
+                    .addComponent('detail', {
+                        text: star_data[i].data,
+                        width: 600,
+                        height: 600,
+                        center: true,
+                        css: {top: '250px', textIndent: '2em', fontSize: '20px'},
+                    })
+//
+//                    .addComponent('enter_small', {
+//                        text: '简介',
+//                        css: {left: '30%', top: '50%', opacity: 0},
+//                        animateIn: {opacity: 1, top: '80%',},
+//                        onclick: function () {
+//                            $.fn.fullpage.moveTo(list_index - 1)
+//                        },
+//                        delay: 1000
+//                    })
+                    .addComponent('enter_small', {
+                        text: '简介',
+                        css: {left: '30%', top: '50%', opacity: 0},
+                        animateIn: {opacity: 1, top: '80%',},
+                        onclick: function () {
+                            $.fn.fullpage.moveTo(list_index - 1)
+                        },
+                        delay: 1000
+                    })
+                    .addComponent('enter_small', {
+                        text: '更多',
+                        css: {right: '-20%', top: '80%', opacity: 0, backgroundColor: 'rgba(255, 114, 130, 0.51)'},
+                        animateIn: {opacity: 1, right: '20%',},
+                        onclick: (function (i) {
+                            return function () {
+
+                                $.fn.fullpage.moveTo(list_index + 12);
+                                $('.h5_component_name_end_text').text(star_detail_data[i]);
+                                $('.h5_component_name_end_icon').css('backgroundImage', 'url(imgs/' + star_data[i].bg + '.png)');
+
+                            }
+                        })(i),
+                        delay: 1500
+                    })
+        }
+        h5.addPage('more')
+                .addComponent('share', {
+                    width: 128,
+                    height: 120,
+                    bg: 'imgs/tail_share.png',
+                    css: {opacity: 0, top: 110, right: 110},
+                    animateIn: {opacity: 1, top: 10, right: 10},
+                    animateOut: {opacity: 0, top: 110, right: 110},
+                    delay: 1000
+                })
+                .addComponent('end_icon', {
+                    width: 300,
+                    height: 300,
+                    center: true,
+                    css: {top: '50px'},
+
+                    'bg': 'imgs/' + star_data[0].bg + '.png',
+                })
+                .addComponent('end_text', {
+                    css: {
+                        padding: '10px 2em',
+                        textIndent: '2em',
+                        top: '30%',
+                        opacity: 0
+                    },
+                    animateIn: {opacity: 1},
+                    text: star_detail_data[0]
+                })
+                .addComponent('enter', {
+                    text: '返回',
+                    css: {left: '50%', top: '100%', opacity: 0},
+                    animateIn: {opacity: .5, top: '85%'},
+                    onclick: function () {
+                        $.fn.fullpage.moveTo(1)
+                    },
+                    delay: 1500
+                });
+
+
+
+
+
+        h5.addPage('tail')
+                .addComponent('logo', {
+                    center: true,
+                    width: 359,
+                    height: 129,
+                    text: '新疆',
+                    css: {
+                        top: 240,
+                        opacity: 0,
+                        color: '#fffff',
+                        fontSize: '50px',
+                        fontWeight: 'block',
+                        textAlign: 'center'
+                    },
+                    animateIn: {opacity: 1, top: 210},
+                    animateOut: {opacity: 0, top: 240},
+                })
+                .addComponent('slogan', {
+                    center: true,
+                    width: 314,
+                    height: 46,
+                    text: '新疆欢迎您',
+                    css: {top: 280, opacity: 0, color: '#FBFF7B', fontSize: '30px', testAlign: 'center'},
+                    animateIn: {opacity: 1, left: '50%'},
+                    animateOut: {opacity: 0, left: '0%'},
+                    delay: 500
+                })
+                .addComponent('share', {
+                    width: 128,
+                    height: 120,
+                    bg: 'imgs/tail_share.png',
+                    css: {opacity: 0, top: 110, right: 110},
+                    animateIn: {opacity: 1, top: 10, right: 10},
+                    animateOut: {opacity: 0, top: 110, right: 110},
+                    delay: 1000
+                })
+                .addComponent('back', {
+                    width: 52,
+                    height: 50,
+                    bg: 'imgs/tail_back.png',
+                    center: true,
+                    onclick: function () {
+                        $.fn.fullpage.moveTo(1)
+                    }
+                })
+
+                .loader(['imgs/tail_back.png', 'imgs/tail_share.png', 'imgs/tail_slogan.png']);
+
+    });
+</script>
+
+</body>
+
+</html>
